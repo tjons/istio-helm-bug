@@ -1,0 +1,17 @@
+autoscaling:
+  enabled: false
+containerSecurityContext:
+  fsGroup: 12
+  runAsGroup: 30
+  runAsNonRoot: true
+  runAsUser: 1024
+  seLinuxOptions:
+    user: foo
+  supplementalGroups:
+  - 1
+  - 2
+  sysctls:
+  - name: foo
+    value: bar
+env: {}
+name: istio-ingressgateway
